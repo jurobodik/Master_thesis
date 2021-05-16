@@ -28,10 +28,10 @@ epsilon_b=rpareto(n, 1,1)
 b=rep(0, n);a=rep(0, n);
 
 for (i in 10:n) {
-  a[i]=0.5*a[i-1] +epsilon_a[i]
-  b[i]=0.5*b[i-1]  +0.5*a[i-5]+epsilon_b[i]
+  a[i]=0.5*a[i-1] +epsilon_a[i];
+  b[i]=0.5*b[i-1]  +0.5*a[i-5]+epsilon_b[i];
 }
-x=data.frame(a,b)
+x=data.frame(a,b);
 
 
 plot(x[,1], type="l", col="blue", xlab="", ylab="");
